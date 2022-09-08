@@ -23,4 +23,9 @@ class EmailAddress extends Labeled {
 
   @override
   int get hashCode => email.hashCode;
+
+  toMap() => {
+        'email': email,
+        'label': label,
+      };
 }
