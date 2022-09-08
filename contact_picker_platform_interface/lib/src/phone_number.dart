@@ -23,4 +23,9 @@ class PhoneNumber extends Labeled {
 
   @override
   int get hashCode => number.hashCode;
+
+  toMap() => {
+        'phoneNumber': number,
+        'label': label,
+      };
 }
