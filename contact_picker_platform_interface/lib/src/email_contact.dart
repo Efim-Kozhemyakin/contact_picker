@@ -1,5 +1,5 @@
-import 'email_address.dart';
 import 'contact.dart';
+import 'email_address.dart';
 
 ///Email Contact
 class EmailContact extends Contact {
@@ -26,4 +26,9 @@ class EmailContact extends Contact {
 
   @override
   int get hashCode => email.hashCode;
+
+  toMap() => {
+        'fullName': fullName,
+        'email': email?.toMap(),
+      };
 }
