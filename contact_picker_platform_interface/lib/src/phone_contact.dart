@@ -26,4 +26,9 @@ class PhoneContact extends Contact {
 
   @override
   int get hashCode => phoneNumber.hashCode;
+
+  toMap() => {
+        'fullName': fullName,
+        'phoneNumber': phoneNumber?.toMap(),
+      };
 }
